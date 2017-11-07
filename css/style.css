@@ -5637,6 +5637,70 @@ body.nav-shop-filter-open #nav-shop-filter { left:0px; }
 				vertical-align:bottom;
 				margin-right:6px;
 			}
+
+.request-form { position:relative; }
+	.request-form input[type="text"], .request-form input[type="email"] {
+		width:100%;
+		margin-bottom:20px;
+	}
+	.request-form textarea {
+		display:block;
+		width:100%;
+		height:209px;
+		margin-bottom:20px;
+	}
+	.request-form input[type="text"].error, .request-form input[type="email"].error, .request-form textarea.error {
+		color:#f58181;
+		background-color:#f9d4d4;
+		border-color:#f7bdbd;
+		box-shadow:none;
+	}
+	.request-form .submit-status {
+		display:none;
+		position:absolute;
+		top:0px;
+		right:0px;
+		bottom:0px;
+		left:0px;
+		font-size:14px;
+		line-height:20px;
+		text-align:center;
+		font-weight:400;
+		background-color:rgba(255,255,255,.5);
+		z-index:400;
+	}
+	.ie .request-form .submit-status { background:url(../images/ie-bg-white-50.png) repeat top left; }
+		.request-form .submit-status .submit-status-text {
+			position:absolute;
+			top:50%;
+			right:0px;
+			left:0px;
+			margin-top:-25px;
+		}
+		.request-form .submit-status span {
+			display:inline-block;
+			text-align:left;
+			background-color:#FFF;
+			padding:13px 20px;
+			border:1px solid #FFF;
+			border-radius:3px;
+		}
+		.request-form .submit-status span.error {
+			color:#d86c6c;
+			background-color:#f6caca;
+			border-color:#e9b8b8;
+		}
+		.request-form .submit-status span.success {
+			color:#529552;
+			background-color:#b9edb9;
+			border-color:#a5dda5;
+		}
+			.request-form .submit-status span .ion {
+				font-size:22px;
+				vertical-align:bottom;
+				margin-right:6px;
+			}
+
 			
 .affa-form-search {
 	overflow:hidden;

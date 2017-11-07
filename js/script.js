@@ -280,6 +280,38 @@
 				return false;
 			});
 			
+            
+            // Request form when submit button clicked
+			$('.request-form').submit(function() {
+				var $form		= $(this);
+				var submitData	= $form.serialize();
+				var status		= true;
+				
+				if (status) {
+					$.ajax({
+						type: 'POST',
+						url: 'includes/request-form.php',
+						data: submitData + '&action=add',
+						dataType: 'html',
+						success: function(msg) {
+							if (parseInt(msg, 0) !== 0) {
+								var msg_split = msg.split('|');
+								
+								if (msg_split[0] === 'success') {
+									$form.find('.submit-status').html('<div class="submit-status-text"><span class="success"><i class="ion ion-ios-checkmark-outline"></i> ' + msg_split[1] + '</span></div>').fadeIn(300).delay(3000).fadeOut(300);
+								} else {
+									$form.find('.submit-status').html('<div class="submit-status-text"><span class="error"><i class="ion ion-ios-close-outline"></i> ' + msg_split[1] + '</span></div>').fadeIn(300).delay(3000).fadeOut(300);
+								}
+							}
+						}
+					});
+				}
+				
+				status = true;
+				
+				return false;
+			});
+            
 			// Signup form when submit button clicked
 			$('.affa-form-signup').submit(function() {
 				var $form		= $(this);
