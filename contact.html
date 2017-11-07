@@ -225,10 +225,10 @@
                             </div>
                         </div>
                 		
-                		<form method="post" action="#" class="affa-form-contact margin-top20">
+                		<form method="post" action="#" class="affa-form-contact margin-top20  margin-bottom60">
 							<div class="row">
 								<div class="col-sm-6">
-									<label for="contact-name">Your Name</label>
+									<label for="contact-name">Your Name <span class="required">*</span></label>
 									<input type="text" name="name" id="contact-name">
 								</div>
 								<div class="col-sm-6">
@@ -236,8 +236,30 @@
 									<input type="text" name="email" id="contact-email">
 								</div>
 							</div>
-							<label for="contact-subject">Subject</label>
-							<input type="text" name="subject" id="contact-subject">
+							<div class="row">
+								<div class="col-sm-6">
+									<label for="contact-phone">Your Phone <span class="required">*</span></label>
+									<input type="text" name="phone" id="contact-phone">
+								</div>
+							</div>
+							<div class="row">
+							    <div class="col-sm-6">
+									<label for="contact-homeaddress">Your Homeaddress </label>
+									<input type="text" name="homeaddress" id="contact-homeaddress">
+								</div>
+								<div class="col-sm-6">
+									<label for="contact-city">Your City </label>
+									<input type="text" name="city" id="contact-city">
+								</div>
+								<div class="col-sm-6">
+									<label for="contact-state">Your State </label>
+									<input type="text" name="state" id="contact-state">
+								</div>
+								<div class="col-sm-6">
+									<label for="contact-zip">Your ZIP </label>
+				                    <input type="text" name="zip" id="contact-zip">
+								</div>
+							</div>
 							<label for="contact-message">Your Message <span class="required">*</span></label>
 							<textarea name="message" id="contact-message"></textarea>
 							<input type="submit" name="submit" value="Send Message">

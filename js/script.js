@@ -210,6 +210,11 @@
 				var submitData	= $form.serialize();
 				var $name		= $form.find('input[name="name"]');
 				var $email		= $form.find('input[name="email"]');
+				var $phone		= $form.find('input[name="phone"]');
+				var $homeaddress= $form.find('input[name="homeaddress"]');
+				var $city		= $form.find('input[name="city"]');
+				var $state		= $form.find('input[name="state"]');
+				var $zip		= $form.find('input[name="zip"]');
 				var $subject	= $form.find('input[name="subject"]');
 				var $message	= $form.find('textarea[name="message"]');
 				var $submit		= $form.find('input[name="submit"]');
@@ -228,6 +233,11 @@
 				if (status) {
 					$name.attr('disabled', 'disabled');
 					$email.attr('disabled', 'disabled');
+					$phone.attr('disabled', 'disabled');
+					$homeaddress.attr('disabled', 'disabled');
+					$city.attr('disabled', 'disabled');
+					$state.attr('disabled', 'disabled');
+					$zip.attr('disabled', 'disabled');
 					$subject.attr('disabled', 'disabled');
 					$message.attr('disabled', 'disabled');
 					$submit.attr('disabled', 'disabled');
@@ -243,6 +253,11 @@
 								if (msg_split[0] === 'success') {
 									$name.val('').removeAttr('disabled').removeClass('error');
 									$email.val('').removeAttr('disabled').removeClass('error');
+									$phone.val('').removeAttr('disabled').removeClass('error');
+									$homeaddress.val('').removeAttr('disabled').removeClass('error');
+									$city.val('').removeAttr('disabled').removeClass('error');
+									$state.val('').removeAttr('disabled').removeClass('error');
+									$zip.val('').removeAttr('disabled').removeClass('error');
 									$subject.val('').removeAttr('disabled').removeClass('error');
 									$message.val('').removeAttr('disabled').removeClass('error');
 									$submit.removeAttr('disabled');
